@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Escolha seu assento no UFC!</title>
+</head>
+<body>
+    <div class="login--modal">
+        <h2>Login</h2>
+        <input type="text" class="login--input" placeholder="login">
+        <input type="password" class="pass--input" placeholder="senha">
+        <div>
+            <button class="login--button">login</button>
+            <button class="show--register">register</button>
+        </div>
+    </div>
+
+    <div class="register--modal invisible">
+        <h2>Register</h2>
+        <input type="text" class="login--register" placeholder="login">
+        <input type="password" class="pass--register" placeholder="senha">
+        <input type="password" class="pass2--register" placeholder="senha">
+        <button class="register--button">register</button>
+    </div>
+
+    <div class="block"></div>
+
+    <div class="movie-container">
+        <label>Escolha a luta:</label>
+        <select id="movie">
+            <option value="15">Pesado</option>
+            <option value="20">Cruzador</option>
+            <option value="18">Meio-Pesado</option>
+            <option value="19">Super Médio</option>
+            <option value="19">Médio</option>
+            <option value="19">Super Meio-Médio</option>
+            <option value="19">Meio-Médio</option>
+            <option value="19">Super Leve</option>
+        </select>
+    </div>
+    
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selecionado</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>Ocupado</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+    
+    <p class="text">Você selecionou <span id="count">0</span> poltronas no valor de R$ <span id="total">0</span></p>
+
+
+    <div> 
+        <button class="sell">vender</button>    
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
