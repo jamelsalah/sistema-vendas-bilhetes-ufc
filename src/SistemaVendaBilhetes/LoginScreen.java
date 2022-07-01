@@ -14,11 +14,11 @@ public class LoginScreen extends JFrame {
 
 	//PANELS
 	JPanel loginScreen = new JPanel();
-	JPanel mainPanel = new JPanel();
-	JPanel panelForLabels = new JPanel();
-	JPanel panelForFields = new JPanel();
-	JPanel panelForButtons = new JPanel();
-	JPanel panelForTitle = new JPanel();
+	JPanel mainContainer = new JPanel();
+	JPanel labelsContainer = new JPanel();
+	JPanel fieldsContainer = new JPanel();
+	JPanel buttonsContainer = new JPanel();
+	JPanel titleContainer = new JPanel();
 	
 	//BUTTONS
 	JButton loginButton = new JButton("Login");
@@ -50,53 +50,53 @@ public class LoginScreen extends JFrame {
         loginScreen.setLayout(new BoxLayout(loginScreen, BoxLayout.PAGE_AXIS));
         loginScreen.setBackground(Color.white);
         
-        panelForTitle.add(title);
-        panelForTitle.setBackground(Color.white);
+        titleContainer.add(title);
+        titleContainer.setBackground(Color.white);
         
         title.setFont(f1);
         title.setForeground(Color.black);
         //title.setBorder(BorderFactory.createLineBorder(Color.black));
         
-        panelForLabels.setLayout(new BoxLayout(panelForLabels, BoxLayout.PAGE_AXIS));
-        panelForLabels.setBackground(Color.white);
+        labelsContainer.setLayout(new BoxLayout(labelsContainer, BoxLayout.PAGE_AXIS));
+        labelsContainer.setBackground(Color.white);
         
-        panelForFields.setLayout(new BoxLayout(panelForFields, BoxLayout.PAGE_AXIS));
-        panelForFields.setBackground(Color.white);
-        panelForFields.setPreferredSize( new Dimension( 200, 80 ) );
-        //panelForFields.setBorder(BorderFactory.createLineBorder(Color.black));
+        fieldsContainer.setLayout(new BoxLayout(fieldsContainer, BoxLayout.PAGE_AXIS));
+        fieldsContainer.setBackground(Color.white);
+        fieldsContainer.setPreferredSize( new Dimension( 200, 80 ) );
+        //fieldsContainer.setBorder(BorderFactory.createLineBorder(Color.black));
         
         loginField.setMaximumSize(new Dimension(200, 30));
         passwordField.setMaximumSize(new Dimension(200, 30));
         
-        panelForLabels.add(Box.createRigidArea(new Dimension(5, 7)));
-        panelForLabels.add(placeholder1);
-        panelForLabels.add(Box.createRigidArea(new Dimension(5, 20)));
-        panelForLabels.add(placeholder2);
-        panelForLabels.setPreferredSize( new Dimension( 70, 80 ) );
-        //panelForLabels.setBorder(BorderFactory.createLineBorder(Color.black));
+        labelsContainer.add(Box.createRigidArea(new Dimension(5, 7)));
+        labelsContainer.add(placeholder1);
+        labelsContainer.add(Box.createRigidArea(new Dimension(5, 20)));
+        labelsContainer.add(placeholder2);
+        labelsContainer.setPreferredSize( new Dimension( 70, 80 ) );
+        //labelsContainer.setBorder(BorderFactory.createLineBorder(Color.black));
         
-        panelForFields.add(loginField);
-        panelForFields.add(Box.createRigidArea(new Dimension(5, 10)));
-        panelForFields.add(passwordField);
+        fieldsContainer.add(loginField);
+        fieldsContainer.add(Box.createRigidArea(new Dimension(5, 10)));
+        fieldsContainer.add(passwordField);
         
-        mainPanel.add(panelForLabels);
-        panelForFields.add(Box.createRigidArea(new Dimension(17, 10)));
-        mainPanel.add(panelForFields);
-        mainPanel.setSize( new Dimension( 150, 100 ) );
-        mainPanel.setBackground(Color.white);
-        //mainPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+        mainContainer.add(labelsContainer);
+        fieldsContainer.add(Box.createRigidArea(new Dimension(17, 10)));
+        mainContainer.add(fieldsContainer);
+        mainContainer.setSize( new Dimension( 150, 100 ) );
+        mainContainer.setBackground(Color.white);
+        //mainContainer.setBorder(BorderFactory.createLineBorder(Color.black));
         
-        panelForButtons.setLayout(new BoxLayout(panelForButtons, BoxLayout.LINE_AXIS));
-        panelForButtons.add(loginButton);
-        panelForButtons.add(registerButton);
-        panelForButtons.setBackground(Color.white);
-        //panelForButtons.setBorder(BorderFactory.createLineBorder(Color.black));
+        buttonsContainer.setLayout(new BoxLayout(buttonsContainer, BoxLayout.LINE_AXIS));
+        buttonsContainer.add(loginButton);
+        buttonsContainer.add(registerButton);
+        buttonsContainer.setBackground(Color.white);
+        //buttonsContainer.setBorder(BorderFactory.createLineBorder(Color.black));
         
         loginButton.addActionListener(new LoginAction(loginField, passwordField));
         
-        loginScreen.add(panelForTitle);
-        loginScreen.add(mainPanel);
-        loginScreen.add(panelForButtons);
+        loginScreen.add(titleContainer);
+        loginScreen.add(mainContainer);
+        loginScreen.add(buttonsContainer);
         add(loginScreen);
 	}
 }

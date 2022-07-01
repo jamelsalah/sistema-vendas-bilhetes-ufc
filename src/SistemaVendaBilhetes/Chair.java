@@ -2,6 +2,8 @@ package SistemaVendaBilhetes;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.lang.reflect.Method;
+import java.util.concurrent.Callable;
 
 import  javax.swing.JButton;
 
@@ -13,12 +15,13 @@ public class Chair extends JButton {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Chair(int state, int id, int salve) {
+	public Chair(int state, int id) {
 		this.id = id;
-		this.state = state;
+		this.state = state;	
 		
 		setPreferredSize(new Dimension( 30, 30 ));
 		setMaximumSize(new Dimension( 20, 20 ));
+		
 		if(state == 0) {
 			setBackground(Color.white );
 		} else if(state == 1) {
@@ -26,8 +29,5 @@ public class Chair extends JButton {
 		} else if(state == 2) {
 			setBackground(Color.red);
 		}
-		
-		System.out.printf("%s\n", salve);
-		
 	}
 }
